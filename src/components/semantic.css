@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* .button {
+  transition: rgb(178, 235, 178) 0.3s ease;
+}
+.button:hover {
+  background-color: #084382;
+} */
+
+.button {
+  background-color: lightgreen; /* Button background color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add padding */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: darkgreen; /* Change background color on hover */
+}

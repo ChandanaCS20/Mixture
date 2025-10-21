@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Chandana's Frontend Portfolio" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/src/components/semantic.css" />
+    <!-- Inline CSS: You can add CSS directly within the HTML file using the <style> tag inside the <head> section: -->
+    <style>
+      body {
+        background-color: rgb(223, 228, 208);
+      }
+      h1 {
+        color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Accessibility ensures your site works for everyone, including people using screen readers or keyboard navigation. -->
+    <header role="banner">
+      <h1>Chandana's Portfolio</h1>
+
+      <!-- - ARIA roles: Help screen readers understand elements -->
+      <nav role="navigation" aria-label="Main menu" class="container">
+        <a href="/src/components/projects.html">Projects</a>
+        <a href="#contact">Contact</a>
+
+        <!-- - alt attribute: Describes images -->
+        <img src="profile.jpg" alt="Chandana smiling at her desk" />
+
+        <!-- - Keyboard navigation: -->
+        <button class="button" tabindex="0">Click Me</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="projects" class="grid">
+        <h2>Featured Projects</h2>
+        <article>
+          <h3>Travel Guide App</h3>
+          <p>A React-based app with dynamic routing and API integration.</p>
+        </article>
+      </section>
+
+      <aside>
+        <h2>Skills</h2>
+        <ul>
+          <li>ReactJS</li>
+          <li>JavaScript</li>
+          <li>Node.js</li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer>
+      <p>© 2025 Chandana</p>
+    </footer>
+  </body>
+</html>

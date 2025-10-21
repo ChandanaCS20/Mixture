@@ -7,6 +7,7 @@ import Fruitlist from "./components/fruitlist.jsx";
 import Form from "./components/form.jsx";
 import Timer from "./components/timer.jsx";
 import UserList from "./components/userlist.jsx";
+import ToggleMessage from "./components/ToggleMessage.jsx";
 
 function App() {
   const names = [
@@ -41,6 +42,7 @@ function App() {
       </div>
       <Timer />
       <UserList />
+      <ToggleMessage />
     </div>
   );
 }

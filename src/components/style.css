@@ -1,0 +1,29 @@
+/* default (light) theme */
+body {
+  background-color: white;
+  color: black;
+  font-family: sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* dark theme when html[data‑theme="dark"] */
+html[data-theme="dark"] body {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* style the button */
+button#theme-toggle {
+  padding: 0.5rem 1rem;
+  margin: 2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #eee;
+  font-size: 1rem;
+}
+
+html[data-theme="dark"] button#theme-toggle {
+  background-color: #333;
+  color: #fff;
+}

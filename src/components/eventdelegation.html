@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Interactive List</title>
+    <style>
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        padding: 10px;
+        margin: 5px 0;
+        background-color: #eee;
+        cursor: pointer;
+      }
+      li.highlight {
+        background-color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>My Listttttttttttttt</h2>
+    <button id="addItem">Add Itemmmmmmmmm</button>
+
+    <ul id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <script>
+      const list = document.querySelector("#list");
+      const addButton = document.querySelector("#addItem");
+      let count = 4; // To track the next item number
+
+      // Event delegation: Handle click events on list items
+      list.addEventListener("click", (e) => {
+        const li = e.target.closest("li");
+
+        if (!li) return; // Not a list item
+
+        // If already highlighted, remove the item
+        if (li.classList.contains("highlight")) {
+          li.remove();
+        } else {
+          // Otherwise, highlight it
+          // First remove highlight from all
+          list
+            .querySelectorAll("li")
+            .forEach((item) => item.classList.remove("highlight"));
+          li.classList.add("highlight");
+        }
+      });
+
+      // Add new item
+      addButton.addEventListener("click", () => {
+        const newItem = document.createElement("li");
+        newItem.textContent = `Item ${count++}`;
+        list.appendChild(newItem);
+      });
+    </script>
+  </body>
+</html>
